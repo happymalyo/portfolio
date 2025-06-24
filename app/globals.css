@@ -15,6 +15,7 @@
   --color-tertiary: #0c1414;
   --color-neutral: #2c343c;
   --color-dark: #0e1217;
+  --color-neon: #ff00f5;
 }
 
 @media (prefers-color-scheme: dark) {

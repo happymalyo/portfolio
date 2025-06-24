@@ -40,7 +40,7 @@ export default function ProjectCard({ project }: Props) {
         ))}
       </div>
       <p className="text-xs text-zinc-400">{project.date}</p>
-      <div className="w-full aspect-[4/3] bg-zinc-800 rounded-md overflow-hidden">
+      <div className="w-full h-[150px] bg-zinc-800 rounded-xl overflow-hidden">
         <img src={project.image} alt={project.title} className="object-cover" />
       </div>
       <div className="flex justify-end">
