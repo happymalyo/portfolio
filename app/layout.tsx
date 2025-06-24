@@ -1,33 +1,31 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.tsx
+import Sidebar from "@/components/layouts/Sidebar";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import type { Metadata } from "next";
+import Header from "@/components/layouts/Header";
 
 export const metadata: Metadata = {
-  title: "Mario Francisco",
-  description: "Mario Francisco, React Developer",
+  title: "Mario Francisco — Portfolio",
+  description: "Frontend Developer Portfolio",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="h-screen">
+        <Header />
+        <div className="flex">
+          <div className="xl:block hidden">
+            <Sidebar />
+          </div>
+          <main className="xl:ml-[220px] flex-1 overflow-y-auto p-4 h-[calc(100vh-4rem)]">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
