@@ -22,7 +22,7 @@ export default function RootLayout({
           <div className="xl:block hidden">
             <Sidebar />
           </div>
-          <main className="xl:ml-[220px] flex-1 overflow-y-auto p-4 h-[calc(100vh-4rem)]">
+          <main className="xl:ml-[220px] flex-1 overflow-y-auto p-6 h-100vh">
             {children}
           </main>
         </div>

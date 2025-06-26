@@ -1,13 +1,21 @@
 import { IoIosLink } from "react-icons/io";
 
-export default function LinkButton() {
+export default function LinkButton({
+  onClick,
+  isCopied,
+}: {
+  onClick: () => void;
+  isCopied: boolean;
+}) {
   return (
     <div className="relative group w-fit">
       <button
-        className="text-purple-300 p-2 rounded-md hover:bg-slate-700 transition duration-200 cursor-pointer"
+        onClick={onClick}
+        className="inline-flex items-center gap-2 text-purple-300 p-2 rounded-md hover:bg-slate-700 transition duration-200 cursor-pointer"
         aria-label="Copy link"
       >
         <IoIosLink size={20} />
+        {isCopied ? "Copied!" : ""}
       </button>
 
       {/* Tooltip */}
