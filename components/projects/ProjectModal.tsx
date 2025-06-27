@@ -79,7 +79,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       aria-modal="true"
       aria-labelledby="project-modal-title"
     >
-      <div className="flex flex-col bg-dark border border-white/15 rounded-xl px-8 py-6 w-full max-w-4xl relative shadow-xl">
+      <div className="flex flex-col bg-dark border border-white/15 rounded-xl px-8 py-6 w-full max-w-4xl relative shadow-xl animate-scale-in">
         {/* Modal Header - Sticky to modal top when scrolling parent */}
         <header className="flex justify-between items-center sticky -top-16 bg-dark py-2 z-10">
           <div className="flex items-center gap-4 text-secondary">
